@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+
+#divEsquerra{
+    border: 1px dotted black;
+    float: left;
+    width: 35%;
+    margin: 8px;
+    padding-left: 5px;
+}
+
+#divDreta{
+    padding-right: 5px;
+    border: 1px dotted black;
+    float: right;
+    width: 35%;
+    margin: 8px;
+    text-align: right;
+}
+
+#divCentral{
+    text-align: right;
+    padding-top: 120px;
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-bottom: 80px;
+}
+
+footer{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: grey;
+    color: white;
+}
+

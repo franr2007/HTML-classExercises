@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(238, 223, 204);
+}
+
+.rubik-h1,h2,h3,header {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.colorVerd{
+    color: green;
+}
+
+#idLetraRoja{
+    color: red;
+    text-decoration: underline;
+}
+
+header{
+    background-color: lightskyblue;
+    text-align: center;
+    border: 2px solid;
+}
+
+aside{
+    background-color: orange;
+    border: 2px solid; 
+    float: left; 
+    height: 450px; 
+    padding-left: 5px; 
+    padding-right: 5px;
+}
+
+main{
+    background-color: palevioletred; 
+    border: 2px solid; 
+    padding-left: 245px;
+}
+
+li.colorAzul{
+    color: blue;
+}
+
+section{
+    padding-left: 5px;
+}
+
+footer{
+    background-color: plum; 
+    border: 2px solid; 
+    text-align: right; 
+    padding-right: 5px;
+}

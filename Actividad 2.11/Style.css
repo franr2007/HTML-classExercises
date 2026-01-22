@@ -1,0 +1,6 @@
+caption, table, td, th {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid blue;
+
+}

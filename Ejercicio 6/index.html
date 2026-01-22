@@ -1,0 +1,63 @@
+<!--41663903R-->
+<!--Francisco Javier Rodriguez-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+    form label { display: block; margin-top: 5px;}
+    form input,
+    form button { display: block; width: 100%; max-width: 300px;}
+    form select { display: block; width: 50%; max-width: 170px;}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Formulario</h1>
+    <form>
+        <div id="formulario">
+            <label for="nombre">Nombre</label>
+            <input name="nombre" id="nombre">
+            <label for="edad">Edad</label>
+            <input name="edad" id="edad" type="number" min="0" max="100">
+            <label for="correo">Correo electronico</label>
+            <input type="email" name="correo" id="correo">
+            <label for="contraseña">Contraseña</label>
+            <input name="contraseña" id="contraseña" type="password" min="6" max="12">
+        </div>
+        <div id="consolas">
+        <label for="seleccion_consolas">Selecciona una de estas consolas</label>
+        <select name="seleccion_consolas" id="seleccion_consolas" >
+            <option value="" selected disabled>Selecciona una opcion</option>
+            <option value="ps5">PS5</option>
+            <option value="ps4">PS4</option>
+            <option value="xbox_series_x">Xbox Series X</option>
+            <option value="xbox_series_s">Xbox Series S</option>
+            <option value="nintendo_switch">Nintendo Switch</option>
+            <option value="nintendo_switch_lite">Nintendo Switch Lite</option>
+            <option value="nintendo_switch_oled">Nintendo Switch Oled</option>
+            <option value="nintendo_switch2">Nintendo Switch 2</option>
+        </select>
+        </div>
+        <div id="idiomas">
+        <label for="español">Español</label>
+        <input type="radio" name="español" id="español" value="español">
+        <label for="catalan">catalan</label>
+        <input type="radio" name="catalan" id="catalan" value="catalan">
+        <label for="ingles">Español</label>
+        <input type="radio" name="ingles" id="ingles" value="ingles">
+        </div>
+        <div id="subscribirse" style="padding-top: 20px;">
+            <label for="notificaciones">¿Quiere recibir notificaciones sobre nuevas ofertas y noticias sobre nosotros?</label>
+            <input type="checkbox" name="" id="notificaciones" name="notificaciones" >
+        </div>
+        <div id="comentario" style="padding-top: 20px;">
+            <label for="coment">Comentario</label>
+            <textarea name="coment" id="coment"></textarea>
+        </div>
+        <button type="submit">enviar</button>
+    </form>
+</body>
+</html>
