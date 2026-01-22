@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juegos Online CIDE</title>
+    <link rel="stylesheet" href="Examen1Aval_estils.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Juegos Online CIDE</h1>
+        <h2>Página donde encontrarás diferentes juegos clásicos</h2>
+    </header>
+    <nav>
+        <a href="Examen1Aval_index.html">Inicio</a>
+        <a href="Examen1Aval_jocs.html">Juegos</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Rellena los siguientes campos para poder jugar</h2>
+
+            <form action="Examen1Aval_jocs.html" method="get">
+                <label for="nom">Nick:</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="edat">Edad:</label>
+                <input type="number" id="edat" name="edat" min="18" required>
+
+                <label for="joc">Juego:</label>
+                <select name="joc" id="joc" required>
+                    <option value="buscaminas">Buscaminas</option>
+                    <option value="memory">Memory</option>
+                </select>
+
+                <label for="nivell">Nivel:</label>
+                <select name="nivell" id="nivell" required>
+                    <option value="Fàcil">Facil</option>
+                    <option value="intermig">Intermedio</option>
+                    <option value="dificil">Dificil</option>
+                </select>
+
+                <button type="submit">Jugar</button>
+            </form>
+        </section>
+        <section>
+            <details>
+                <summary>Más información</summary>
+                <p>
+                    Si quieres obtener más información sobre los juegos, revisa este vídeo.
+                </p>
+                <iframe width="480" height="270" 
+                src="https://www.youtube.com/embed/jRgtwnF9fgk"
+                title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Juegos Online CIDE</p>
+    </footer>
+
+</body>
+
+</html>

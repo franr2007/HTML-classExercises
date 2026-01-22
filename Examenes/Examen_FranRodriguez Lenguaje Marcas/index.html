@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <h1>Juegos Online CIDE</h1>
+        <h2>Página donde encontrarás diferentes juegos clásicos</h2>
+    </header>
+    <main>
+        <section>
+            <a href="index.html">Inicio</a>
+            <a href="juegos.html">Juegos</a>
+        </section>
+        <section>
+            <h2>Rellena los siguientes campos para poder jugar</h2>
+            <form action="juegos.html">
+                <label for="nick">Nick:</label>
+                <input type="text" required>
+                <label for="edad">Edad:</label>
+                <input type="number" min="18" required>
+                <label for="juegos">Juego:</label>
+                <select name="juegos">
+                    <option value="bucaminas">Buscaminas</option>
+                    <option value="memory">Memory</option>
+                </select>
+                <label for="nivel">Nivel:</label>
+                <select name="nivel">
+                    <option value="1">Facil</option>
+                    <option value="2">Intermedio</option>
+                    <option value="3">Difícil</option>
+                </select>
+                <button type="submit">Jugar</button>
+            </form>
+        </section>
+        <section>
+            <details>
+                <summary>Más información</summary>
+                <p>Si quieres obtener más información sobre los jueos, revisa este video.</p>
+                <iframe src="https://www.youtube.com/embed/jRgtwnF9fgk" frameborder="0"><video src=""></video></iframe>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Juegos Onlie CIDE</p>
+    </footer>
+</body>
+</html>

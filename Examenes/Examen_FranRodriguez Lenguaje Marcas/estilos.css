@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+
+body{
+    font-family: Arial;
+    background-color: #d4e9d5;
+}
+
+h1{
+    font-family: 'Science Gothic';
+}
+
+h1,h2{
+    color: #2e7d32;
+}
+
+section, header,footer{
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+}
+
+summary{
+    cursor: pointer;
+}
+
+input,select,button{
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #4ac352;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    background-color: #4ac352;
+}
+
+summary{
+    font-weight: bold;
+}
+
+label,p,a,th{
+    font-size: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+th{
+    background-color: #2e7d32;
+    color: white;
+
+}
+
+td{
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+a{
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+header{
+    margin-top: 15px;
+}
+
+footer{
+    margin-bottom: 50px;
+}
+
+.galeriaBuscaminas{
+    display: flex;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 100px;
+}
+
+.galeriaMemoria{
+    display: flex;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 100px;
+}

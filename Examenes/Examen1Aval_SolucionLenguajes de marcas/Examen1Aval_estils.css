@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d4e9d5;
+}
+
+h1 {
+    font-family: "Science Gothic";
+}
+
+h1,
+h2 {
+    color: #2e7d32;
+}
+
+section,
+header,
+footer,
+article,
+nav {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration-line: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+button,
+select {
+    width: 100%;
+    border: 1px solid #4ac352;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4ac352;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina els espais entre les cel·les, "fusiona los bordes" */
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}

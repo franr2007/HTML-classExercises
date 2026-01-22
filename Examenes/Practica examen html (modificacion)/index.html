@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section>
+        <h1>Llibreria Cide</h1>
+        <h2>Valoració del llibre finalista del Premi Planeta 2025</h2>
+        <p>En aquesta pàgina pots consultar informació sobre el llibre finalista del Premi Planeta 2025 i deixar la teva valoració com a lector o lectora</p>
+        </section>
+    </header>
+    <main>
+        <section>
+            <details>
+                <summary>Veure informació del llibre finalista</summary>
+                <p><strong>Titol:</strong> Cuando el viento hable</p>
+                <p><strong>Autora:</strong> Ángela Banzas</p>
+                <p><strong>Premi:</strong> Finalista del Premi Planeta 2025</p>
+                <p><strong>Descripció</strong> Novel·la ambientada a la Galícia rural que explora secrets familiar i memòria col·lectiva a través de la història d'una nina nascuda a la postguerra i criada pels seus avis.</p>
+            </details>
+        </section>
+        <section>
+            <h2>Deixa la teva valoració</h2>
+            <form action="gracies.html" method="get" target="_blank">
+                <p>
+                    <label for="Nom">Nom:</label>
+                    <input type="text" required >
+                </p>
+                <p>
+                    <label for="email">Correu electrònic:</label>
+                    <input type="email" required>
+                </p>
+                <p>
+                    <label for="Valoracio"> Valoració (1 = Molt dolenta,5 = Excel·lent):</label>
+                    <input type="range" min="1" max="5" required>
+                </p>
+                <p>
+                    <label for="comentari">La teva opinió</label>
+                    <textarea name="comentari" placeholder="Deja aqui tu comentario..." required></textarea>
+                </p>
+                <p><button type="submit">Enviar Valoració</button></p>
+            </form>
+        </section>
+        <section>
+            <h2>Opinions d'altres lectors</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Valoració</th>
+                        <th>Comentari</th>
+                    </tr>
+                    <tr>
+                        <td>Laura</td>
+                        <td>5</td>
+                        <td>Una història preciosa, molt emocionant.</td>
+                    </tr>
+                    <tr>
+                        <td>Marc</td>
+                        <td>4</td>
+                        <td>Personatges molt ben construïts.</td>
+                    </tr>
+                    <tr>
+                        <td>Sofía</td>
+                        <td>3</td>
+                        <td>Interessant, però el final m'ha deixat freda.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Llibreria Cide</p>
+    </footer>
+</body>
+</html>
