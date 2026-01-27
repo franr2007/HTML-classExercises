@@ -84,22 +84,68 @@ footer{
     margin-bottom: 50px;
 }
 
-.galeriaBuscaminas{
+.galeria{
     display: flex;
-    height: 150px;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
-    gap: 100px;
+    gap: 5%;
 }
 
-.galeriaMemoria{
-    display: flex;
-    height: 150px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
-    gap: 100px;
+.grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 7px;
+    background-color: white;
+    text-align: center;
 }
+
+.grid >p:nth-child(1),
+.grid >p:nth-child(2),
+.grid >p:nth-child(3){
+    font-weight: bold;
+    background-color: #4ac352;
+    color: white;
+    margin: 0px;
+}
+
+@media(max-width:768px) {
+    .galeria{
+        flex-direction: column;
+    }
+
+    .grid{
+        grid-template-columns: 100%;
+    }
+
+    .grid p:nth-child(1),
+    .grid p:nth-child(2),
+    .grid p:nth-child(4),
+    .grid p:nth-child(5),
+    .grid p:nth-child(7),
+    .grid p:nth-child(8){
+        display: none;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .galeria{
+        flex-wrap: wrap;
+    }
+
+    .grid{
+        grid-template-columns: 50% 50%;
+    }
+
+    .grid p:nth-child(2),
+    .grid p:nth-child(5),
+    .grid p:nth-child(8){
+        display: none;
+    }
+}
+
+@media (min-width:1025px){
+    
+}
+
