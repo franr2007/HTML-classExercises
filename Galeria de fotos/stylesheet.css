@@ -1,0 +1,40 @@
+h1{
+    font-size: 45px;
+    background-color: #272727;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    height: 60px;
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    animation: forwards;
+    animation-name: animacionScroll;
+    animation-timeline: scroll(root);
+    animation-range: 0 50%;
+    
+}
+
+@keyframes animacionScroll{
+    from{
+    }
+    to{
+        color: black;
+        opacity: 70%;
+        background-color: white;
+        padding-top: 25px;
+        font-size: 25px;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid>img{
+    width: 95%;
+    margin-top: 5%;
+    margin-left: 2%;
+    border-radius: 20px;
+}
