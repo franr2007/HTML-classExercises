@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #1d9031;
+    color: white;
+    padding: 10px 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    animation-name: animacionHeader;
+    animation-timeline: scroll(root);
+    animation-range: 0px;
+}
+
+@keyframes animacionHeader {
+    to{
+        height: 40px;
+        opacity: 80%;
+        font-size: 70%;
+    }
+}
+
+.logo {
+    width: 60px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;        
+    display: flex;        
+    gap:50px;             
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/******** Secció Nosaltres ***********/
+.about {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-text, .about-image  {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/******* Secció Serveis************/
+/* Utilizar GRID
+Color del borde #ddd */ 
+h3 {
+    color:  #1d9031;
+    text-align: center;
+}
+
+.service-item>p{
+    text-align: center;
+}
+
+.services {
+    background-color: #f9f9f9;
+}
+
+.service-icon {
+    width: 50px;
+    padding-left: 40%;
+}
+
+.service-list{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item{
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    animation-name: crecerServicio;
+}
+
+@keyframes crecerServicio{
+    to{
+        scale:200px;
+        z-index: 1;
+    }
+}
+
+/******* Secció Portfoli ************/
+/* Utilizar Flex
+Color del borde #ddd */ 
+.portfoli{
+    background-color: rgb(237, 237, 237);
+}
+
+.portfoli-item {
+    width: 25%;    
+    text-align: center;
+}
+
+.portfoli-item>img{
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.portfoli-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+/****** Secció Contacte ***********/
+
+.contact>form{
+    display: grid;
+    gap: 10px;
+    padding: 0 20%;
+}
+
+.contact button {
+    background-color: #1d9031;
+    color: white;
+    border: solid 1px #ddd;
+}
+/*********** Footer **************/
+
+.footer {
+    background-color: #11591d;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-content h3{
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul {
+    list-style: none;        
+    display: flex;          
+    flex-direction: column;
+    gap: 15px;              
+}
+
+.footer i {
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+/*********** Media Queries **************/
+
+/* Responsive per Mòbil */
+@media (max-width: 768px) {
+    header::after {
+        content: "☰";
+        font-size: 1.5rem;
+        color: white;
+        right: 1em;
+        cursor: pointer;
+    }
+
+    .about-text, .about-image, .portfoli-item {
+        width: 100%; 
+    }
+
+    header>.idioma{
+        display: none;
+    }
+
+    header>nav{
+        display: none;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .service-list{
+        grid-template-columns: none;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    .portfoli-content{
+        flex-direction: column;
+    }
+
+}
