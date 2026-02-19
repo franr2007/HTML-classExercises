@@ -1,12 +1,29 @@
+var assignatura;
 var botonAnadir= document.getElementById("botonAnadir");
 var nuevaAssignatura;
-var DAM1año = ["Llenguatges","Sistemes","Programació,"+nuevaAssignatura];
-var DAM2año = ["Interficies","entornos","empresas"];
+var arrayAssignaturas = ["Llenguatges","Sistemes","Programació","Interficies","Entornos","Empresas"];
 var fecha;
 var botonBorrar = document.getElementById("botonBorrar");
 var botonBuscar = document.getElementById("botonBuscar");
 
-nuevaAssignatura= prompt("Introduce una nueva asignatura");
-console.log(nuevaAssignatura);
-fecha=new Date();
+function addAssignatura(){
+    nuevaAssignatura = prompt("Introduce una nueva asignatura").toLocaleLowerCase();
+    fecha=new Date();
+    console.log(nuevaAssignatura+" "+fecha);
 
+    arrayAssignaturas[arrayAssignaturas.length] = nuevaAssignatura;
+}
+
+function deleteAssignatura(){
+    assignatura = prompt("Que assignatura quieres borrar").toLocaleLowerCase();
+
+    arrayAssignaturas.forEach(arrayAssignaturas => {
+        if(assignatura == arrayAssignaturas.toLocaleLowerCase()){
+            console.log("Assignatura encontrada")
+        }
+        else{
+            console.log("Assignatura no encontrada")
+        }
+
+    });
+}
