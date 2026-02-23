@@ -1,29 +1,54 @@
-var assignatura;
-var botonAnadir= document.getElementById("botonAnadir");
-var nuevaAssignatura;
-var arrayAssignaturas = ["Llenguatges","Sistemes","Programació","Interficies","Entornos","Empresas"];
-var fecha;
-var botonBorrar = document.getElementById("botonBorrar");
-var botonBuscar = document.getElementById("botonBuscar");
+var assignaturaDam1 = ["Llenguatges","Sistemes","Programació"];
+var assignaturaDam2 = ["Interficies","Entornos","Empresas"];
+var arrayAssignaturas= assignaturaDam1.concat(assignaturaDam2);//combina los arrays
 
 function addAssignatura(){
-    nuevaAssignatura = prompt("Introduce una nueva asignatura").toLocaleLowerCase();
-    fecha=new Date();
-    console.log(nuevaAssignatura+" "+fecha);
-
-    arrayAssignaturas[arrayAssignaturas.length] = nuevaAssignatura;
+    var assignatura = prompt("Introduce una nueva asignatura").toLocaleLowerCase();
+    if (assignatura){ //si el usuario deja vacio el prompt no hace nada
+    var fecha=new Date();
+    console.log("Se ha añadido la siguiente assignatura: "+assignatura+" "+fecha);
+    arrayAssignaturas.push(assignatura);
+    }
 }
 
-function deleteAssignatura(){
-    assignatura = prompt("Que assignatura quieres borrar").toLocaleLowerCase();
+function borrarAssignatura(){
+    var assignatura = prompt("Que assignatura quieres borrar").toLocaleLowerCase();
+    var encontrada = false;
+    var nuevoArrayAssignaturas=[];
 
-    arrayAssignaturas.forEach(arrayAssignaturas => {
-        if(assignatura == arrayAssignaturas.toLocaleLowerCase()){
-            console.log("Assignatura encontrada")
+    arrayAssignaturas.forEach(a => {
+        if(assignatura == a.toLocaleLowerCase()){
+            encontrada=true;
         }
         else{
-            console.log("Assignatura no encontrada")
+            nuevoArrayAssignaturas.push(a);
         }
-
     });
+
+    arrayAssignaturas = nuevoArrayAssignaturas;
+
+    if(encontrada){
+        console.log("Se ha borrado la siguiente assignatura: "+assignatura);
+    }
+    else{
+        console.log("No se ha borrado ninguna assignatura, assignatura no encontrada");
+    }
+}
+
+function buscarAssignatura(){
+    var assignatura = prompt("Que assignatura quieres buscar?").toLocaleLowerCase();
+    var encontrada = false;
+
+    arrayAssignaturas.forEach(a => {
+        if(assignatura == a.toLocaleLowerCase()){
+            encontrada=true;
+        }
+    });
+
+    if(encontrada){
+        console.log("Assignatura encontrada");
+    }
+    else{
+        console.log("No se ha encontrado ninguna assignatura");
+    }
 }
