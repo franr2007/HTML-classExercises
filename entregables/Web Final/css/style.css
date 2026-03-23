@@ -1,0 +1,19 @@
+body{
+ background-color: #000015;
+ color: white;
+}
+
+header{
+    
+}
+
+.seccionHoteles h2{
+    margin-top: 50px;
+}
+
+.hotel img{
+    width: 50%;
+    height: 450px;
+    border: 5px, solid, white;
+    border-radius: 50px;
+}
