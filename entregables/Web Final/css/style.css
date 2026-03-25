@@ -1,14 +1,15 @@
 body{
- background-color: #e7d3ad;
- color: rgb(255, 255, 255);
+ background-color: #ffffff;
+ color: rgb(87, 87, 87);
 }
 
 body h1,h2,h3,p,span,img{
-    background-color: rgba(253, 186, 98, 0.12);
+    background-color: rgb(255, 187, 2);
     border-radius: 50px;
     padding: 10px;
     width: 300px;
     text-align: center;
+
 }
 
 body h1{
@@ -17,6 +18,19 @@ body h1{
 
 body p, span{
     width: 400px;
+}
+
+.menu{
+    background-color: rgb(255, 187, 2);
+    border-radius: 50px;
+}
+
+.menu button, img {
+    color: rgb(87, 87, 87);
+    background-color: ;
+    cursor: pointer;
+    border: none;
+    margin: 4%;
 }
 
 .seccionHoteles h2{
