@@ -1,14 +1,10 @@
 body{
     background-color: #ffffff;
     color: rgb(87, 87, 87);
-    overflow: hidden;
 }
 
 body h1, body h2, body h3, body p, body span, body img{
-    background-color: rgb(255, 187, 2);
-    border-radius: 50px;
     padding: 10px;
-    max-width: 300px;
     text-align: center;
 }
 
@@ -20,21 +16,12 @@ body p, body span{
     max-width: 400px;
 }
 
-.menu{
-    background-color: rgb(255, 187, 2);
-    border-radius: 50px;
-}
-
 .menu button, .menu img{
     color: rgb(87, 87, 87);
-    background-color: rgb(216, 160, 5);
     border-radius: 50px;
     cursor: pointer;
     border: none;
     width: 100px;
-}
-.icono{
-    
 }
 
 .seccionHoteles{
@@ -58,7 +45,7 @@ body p, body span{
 
 .hotel{
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,7 +55,26 @@ body p, body span{
 .hotel h3, .hotel p, .hotel img, .hotel span{
     height: 50px;
     width: 100%;
-    justify-content: center;
+}
+
+.hotel h3, .hotel p, .hotel span{
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.hoteles .hotel:nth-child(even) h3, .hotel:nth-child(even) p, .hotel:nth-child(even) span {
+    text-align: right;
+}
+
+.hotel h3, .hotel img {
+    margin: 0;
+    padding: 0;
+}
+
+.hotel h3{
+    background-color: aliceblue;
+    height: 25px;
+    display: flex;
     align-items: center;
 }
 
@@ -78,6 +84,7 @@ body p, body span{
 }
 
 .hotel img{
+    margin-top: 0;
     height: 350px;
     border: 5px solid white;
     border-radius: 50px;
