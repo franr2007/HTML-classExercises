@@ -5,11 +5,6 @@ body{
     margin: 0;
 }
 
-body h1, body h2, body h3, body p, body span, body img{
-    padding: 10px;
-    text-align: center;
-}
-
 body h1, body h2, body h3{
     max-width: 600px;
     background: linear-gradient(to bottom, #1a6a8a, #5ba3c9);
@@ -38,6 +33,30 @@ header h1 span {
     text-align: center;
     width: 100%;
     max-width: 100%;
+}
+
+section h1, body h2, body h3, body p, body span, body img{
+    padding: 10px;
+    text-align: center;
+}
+
+footer table{
+    width: 100%;
+}
+
+footer tr{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+footer td{
+    margin-left: 30%;
+    margin-right: 0%;
+}
+
+footer p ,footer h3{
+    text-align: left;
+    max-width: 1000px;
 }
 
 /* CSS index */
@@ -76,7 +95,7 @@ header h1 span {
 }
 
 .menu img{
-    width: 5%;
+    width: 50px;
     height: 50px;
     
 }
