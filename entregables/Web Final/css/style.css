@@ -1,7 +1,8 @@
 body{
     background-color: #ffffff;
     color: rgb(87, 87, 87);
-    background-color: rgb(236, 236, 236);
+    background-color: #e0f4fa;
+    margin: 0;
 }
 
 body h1, body h2, body h3, body p, body span, body img{
@@ -11,7 +12,7 @@ body h1, body h2, body h3, body p, body span, body img{
 
 body h1, body h2, body h3{
     max-width: 600px;
-    background: linear-gradient(to bottom, #000000, #ffbb02);
+    background: linear-gradient(to bottom, #1a6a8a, #5ba3c9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -20,12 +21,64 @@ body p, body span{
     max-width: 400px;
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header h1{
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+header h1 span {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* CSS index */
+
+.titulo{
+    background-image: url('../img/Playa/fondo-titulo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-top: 0;
+}
+
+.titulo h1{
+    margin: 0;
+}
+
+/* CSS Hoteles */
+
+.menu{
+    background-color: rgb(187, 238, 238);
+    margin: 0;
+    height:80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .menu button, .menu img{
     color: rgb(87, 87, 87);
     border-radius: 50px;
     cursor: pointer;
     border: none;
-    width: 100px;
+    width: 10%;
+    height: 30px;
+}
+
+.menu img{
+    width: 5%;
+    height: 50px;
+    
 }
 
 .seccionHoteles{
@@ -106,6 +159,7 @@ form{
     display: flex;
     flex-direction: column;
     width:400px;
+    margin-top: 5%;
 }
 
 form input{
