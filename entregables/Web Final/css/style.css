@@ -43,6 +43,32 @@ header h1 span {
     max-width: 100%;
 }
 
+.menu{
+    background-color: #1a6a8a;
+    margin: 0;
+    height:80px;
+    width: 96.2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu button, .menu img{
+    color: rgb(87, 87, 87);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    width: 15%;
+    height: 30px;
+}
+
+.menu img{
+    width: 50px;
+    height: 50px;
+    background-color: #e0f4fa;
+    border-radius: 30px;
+}
+
 section h1, body h2, body h3, body p, body span, body img{
     padding: 10px;
     text-align: center;
@@ -88,7 +114,6 @@ footer p{
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-    margin-top: 0;
 }
 
 .titulo h1{
@@ -105,32 +130,6 @@ footer p{
 
 
 /* CSS Hoteles */
-
-.menu{
-    background-color: #1a6a8a;
-    margin: 0;
-    height:80px;
-    width: 96.2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu button, .menu img{
-    color: rgb(87, 87, 87);
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    width: 15%;
-    height: 30px;
-}
-
-.menu img{
-    width: 50px;
-    height: 50px;
-    background-color: #e0f4fa;
-    border-radius: 30px;
-}
 
 .seccionHoteles{
     width: 100%;
