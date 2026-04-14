@@ -23,13 +23,14 @@
         <form action="">
             <div>
                 <p>Email: </p>
-                <input type="email">
+                <input id="email" type="email" required>
             </div>
             <div>
                 <p>Password: </p>
-                <input type="password">
+                <input id="password" type="password" required>
             </div>
-            <button type="submit">Iniciar sesion</button>
+            <p id="errorLogin"></p>
+            <button type="submit" onclick="validarContraseña(event)">Iniciar sesion</button>
             <a href="">No tienes una cuenta? Haz click aqui</a>
         </form>
     </section>

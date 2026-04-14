@@ -63,10 +63,10 @@ header h1 span {
 }
 
 .menu img{
-    width: 2%;
-    height: 2%;
+    width: 2.3%;
+    height: 2.3%;
     background-color: #e0f4fa;
-    border-radius: 30px;
+    border-radius: 100px;
     padding: 10px;
 }
 
@@ -222,7 +222,7 @@ form{
     display: flex;
     flex-direction: column;
     width:400px;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 form input{
@@ -231,21 +231,28 @@ form input{
     margin-bottom: 2%;
 }
 
-form p{
-    width: 20%;
+form>div>p{
+    width: 30%;
+}
+
+#errorLogin{
+    color: rgba(255, 1, 1, 0.726);
 }
 
 form div{
     display: flex;
     flex-direction: row;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 form button{
     margin-top: 2%;
     margin-bottom: 2%;
-    padding: 5px;
+    padding: 7px;
     border-color: grey;
     background-color: darkgray;
     color: white;
+    cursor: pointer;
 }
 
 /* CSS footer */
