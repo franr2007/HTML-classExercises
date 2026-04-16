@@ -1,8 +1,8 @@
 function validarContraseña(event){
     event.preventDefault();
-    let correo=document.getElementById('email').value;
+    let user=document.getElementById('email').value;
     let password= document.getElementById('password').value;
-    if(correo==""){
+    if(user==""){
         document.getElementById('errorLogin').textContent = 'Rellena el campo del email';
     }
     else if(password==""){
@@ -24,7 +24,7 @@ function validarContraseña(event){
         document.getElementById('errorLogin').textContent = 'La contraseña tiene que tener almenos un numero';
     }
     else{
-        sessionStorage.setItem('usuario', correo);
+        sessionStorage.setItem('usuario', user);
         window.location.href = 'index.html';
     }
 }
