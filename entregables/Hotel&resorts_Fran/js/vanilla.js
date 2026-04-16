@@ -55,3 +55,14 @@ function comprobarNum(password){
     }
     return false;
 }
+
+window.onload = function(){
+    if(sessionStorage.getItem('usuario') != null){
+        document.getElementById('btnLogin').textContent = '🙍‍♂️CERRAR SESION';
+    }
+}
+
+function cerrarSesion(){
+    sessionStorage.removeItem('usuario');
+    document.getElementById('btnLogin').textContent = '🙍‍♂️INICIAR SESION';
+}
