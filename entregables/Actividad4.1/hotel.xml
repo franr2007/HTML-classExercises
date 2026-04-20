@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotel>
+    <foto>hotel_maricel.jpg</foto>
+    <nombre>Hotel Maricel Mallorca</nombre>
+    <descripcion>Hotel de lujo con vistas al mar en Cas Català, Mallorca</descripcion>
+    <categoria>Resort</categoria>
+    <precio>320.00</precio>
+</hotel>

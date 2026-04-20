@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "foto":        { "type": "string" },
+        "nombre":      { "type": "string" },
+        "descripcion": { "type": "string" },
+        "categoria":   { "type": "string" },
+        "precio":      { "type": "number" }
+    }
+}
