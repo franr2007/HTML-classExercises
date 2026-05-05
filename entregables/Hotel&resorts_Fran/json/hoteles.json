@@ -1,0 +1,116 @@
+{
+    "playa":[
+        {
+            "foto": "../img/Playa/calador1.png",
+            "nombre": "HOTEL CALA D'OR",
+            "descripcion": "Encantador hotel de 4 estrellas situado en primera línea de playa en Cala d'Or, con vistas espectaculares al mar Mediterráneo.",
+            "precio": 180
+        },
+        {
+            "foto": "../img/Playa/esTrenc1.png",
+            "nombre": "RESORT ES TRENC",
+            "descripcion": "Resort exclusivo junto a la playa virgen de Es Trenc, considerada una de las aguas más cristalinas de Mallorca.",
+            "precio": 320
+        },
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "GRAN HOTEL ALCÚDIA",
+            "descripcion": "Hotel de 5 estrellas con spa y piscina infinita en la bahía de Alcúdia, con acceso directo a la playa de arena fina.",
+            "precio": 450
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "PALAU FORMENTOR",
+            "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
+            "precio": 680
+        },
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "VILLA MARINA LUXURY",
+            "descripcion": "Villa privada de lujo con acceso exclusivo a cala privada, servicio de butler personal y chef privado las 24 horas.",
+            "precio": 1200
+        },
+        {
+            "foto": "nixe_palace.jpg",
+            "nombre": "HOTEL NIXE PALACE",
+            "descripcion": "Hotel de lujo en primera línea de playa en Palma de Mallorca, con acceso directo a Cala Major, vistas al mar Mediterráneo, spa completo y habitaciones elegantes.",
+            "precio": 895
+        }
+    ],
+    "montaña": [
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "FINCA SON MARROIG",
+            "descripcion": "Finca rústica restaurada en la Sierra de Tramuntana, rodeada de olivos centenarios con vistas al mar.",
+            "precio": 210
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "POSADA DE VALLDEMOSSA",
+            "descripcion": "Hotel boutique en el corazón del pintoresco pueblo de Valldemossa, declarado Patrimonio de la Humanidad por la UNESCO.",
+            "precio": 350
+        },
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "HOTEL DEIÀ MOUNTAIN",
+            "descripcion": "Refugio exclusivo en el pueblo de artistas de Deià, con piscina de agua salada y restaurante gastronómico con estrella Michelin.",
+            "precio": 520
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "CASTELL D'ALARÓ RESORT",
+            "descripcion": "Resort único al pie del Castell d'Alaró, con senderismo exclusivo, helipuerto privado y experiencias de lujo aventura.",
+            "precio": 890
+        },
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "GRAN FINCA TRAMUNTANA",
+            "descripcion": "La finca de lujo más exclusiva de la Sierra de Tramuntana, con suite presidencial, spa privado y bodega propia.",
+            "precio": 1800
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "PALAU FORMENTOR",
+            "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
+            "precio": 680
+        }
+    ],
+    "urbano": [
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "HOTEL BORN PALMA",
+            "descripcion": "Hotel de diseño en el centro histórico de Palma, alojado en un palacio del siglo XVI a 5 minutos de la Catedral.",
+            "precio": 195
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "PALAU SA FONT",
+            "descripcion": "Palacio del siglo XVII reconvertido en hotel boutique con patio interior y terraza con vistas panorámicas a la bahía.",
+            "precio": 340
+        },
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "GRAND HOTEL PALMA",
+            "descripcion": "Hotel modernista emblemático de Palma con restauración original y suites únicas, a pasos de la Catedral de Mallorca.",
+            "precio": 480
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "ROOFTOP PALMA SUITES",
+            "descripcion": "Hotel de diseño contemporáneo con piscina en terraza, bar rooftop y vistas de 360° a la Catedral y la bahía de Palma.",
+            "precio": 620
+        },
+        {
+            "foto": "img/Playa/CalaDor/calador1.png",
+            "nombre": "PALACIO REAL MALLORCA",
+            "descripcion": "La máxima expresión del lujo urbano en Palma, con suite real de 400m², servicio de Rolls Royce y seguridad las 24h.",
+            "precio": 2500
+        },
+        {
+            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "nombre": "PALAU FORMENTOR",
+            "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
+            "precio": 680
+        }
+    ]
+}

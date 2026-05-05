@@ -66,3 +66,36 @@ function cerrarSesion(){
     sessionStorage.removeItem('usuario');
     document.getElementById('btnLogin').textContent = '🙍‍♂️INICIAR SESION';
 }
+
+
+fetch('data/hoteles.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    cargarHoteles(jsonData.playa,   'hoteles_playa');
+    cargarHoteles(jsonData.montaña, 'hoteles_montaña');
+    cargarHoteles(jsonData.urbanos, 'hoteles_urbanos');
+  })
+  .catch(error => {
+    console.error("Error carregant el json:", error);
+});
+  
+
+function cargarHoteles(listaHoteles) {
+
+    hoteles.forEach(hotel => {
+        
+        const article= document.createElement('article'); // crea un article en el html
+        article.classList.add('producto'); //mete la classe producto en el article
+
+        //dentro del article añade el hotel
+        article.innerHTML = `
+        <h3>${hotel.nombre}</h3>
+        <img src="${hotel.imagen} alt="${hotel.nombre}" ">
+        <p>${hotel.descripcion}</p>
+        <span>${hotel.precio} €/noche</span>
+        `;
+
+    });
+
+    
+}
