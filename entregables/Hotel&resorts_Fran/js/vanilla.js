@@ -68,33 +68,37 @@ function cerrarSesion(){
 }
 
 
-fetch('data/hoteles.json')
+fetch('../json/hoteles.json')
   .then(response => response.json())
   .then(jsonData => {
-    cargarHoteles(jsonData.playa,   'hoteles_playa');
+    cargarHoteles(jsonData.playa, 'hoteles_playa');
     cargarHoteles(jsonData.montaña, 'hoteles_montaña');
-    cargarHoteles(jsonData.urbanos, 'hoteles_urbanos');
+    cargarHoteles(jsonData.urbano, 'hoteles_urbano');
   })
   .catch(error => {
     console.error("Error carregant el json:", error);
 });
   
 
-function cargarHoteles(listaHoteles) {
+function cargarHoteles(listaHoteles, direccion) {
 
-    hoteles.forEach(hotel => {
+    const contenedor = document.getElementById(direccion);
+
+    listaHoteles.forEach(hotel => {
         
-        const article= document.createElement('article'); // crea un article en el html
-        article.classList.add('producto'); //mete la classe producto en el article
+        const contenido= document.createElement('article'); // crea un article en el html
+        contenido.classList.add('hotel'); //mete la classe hotel en el article
 
         //dentro del article añade el hotel
-        article.innerHTML = `
+        contenido.innerHTML = `
         <h3>${hotel.nombre}</h3>
-        <img src="${hotel.imagen} alt="${hotel.nombre}" ">
+        <img src="${hotel.foto}" alt="${hotel.nombre}">
         <p>${hotel.descripcion}</p>
         <span>${hotel.precio} €/noche</span>
+        <button class="button">Añadir a favoritos</button>
         `;
 
+        contenedor.appendChild(contenido);
     });
 
     

@@ -165,7 +165,14 @@ section h1, body h2, body h3, body p, body span, body img{
 
 .hotel span{
     height: 20px;
+    margin-bottom: 20px;
+}
+
+.hotel button{
     margin-bottom: 200px;
+    border-radius: 20px;
+    width: 98%;
+    height: 40px;
 }
 
 .hotel img{

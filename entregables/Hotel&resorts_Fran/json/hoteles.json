@@ -13,25 +13,25 @@
             "precio": 320
         },
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
+            "foto": "img/Playa/Alcudia1.png",
             "nombre": "GRAN HOTEL ALCÚDIA",
             "descripcion": "Hotel de 5 estrellas con spa y piscina infinita en la bahía de Alcúdia, con acceso directo a la playa de arena fina.",
             "precio": 450
         },
         {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "foto": "img/Playa/Formentor1.png",
             "nombre": "PALAU FORMENTOR",
             "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
             "precio": 680
         },
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
+            "foto": "img/Playa/Marina1.png",
             "nombre": "VILLA MARINA LUXURY",
             "descripcion": "Villa privada de lujo con acceso exclusivo a cala privada, servicio de butler personal y chef privado las 24 horas.",
             "precio": 1200
         },
         {
-            "foto": "nixe_palace.jpg",
+            "foto": "img/Playa/Nixie1.png",
             "nombre": "HOTEL NIXE PALACE",
             "descripcion": "Hotel de lujo en primera línea de playa en Palma de Mallorca, con acceso directo a Cala Major, vistas al mar Mediterráneo, spa completo y habitaciones elegantes.",
             "precio": 895
@@ -39,40 +39,40 @@
     ],
     "montaña": [
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
+            "foto": "img/Montana/Marroig1.png",
             "nombre": "FINCA SON MARROIG",
             "descripcion": "Finca rústica restaurada en la Sierra de Tramuntana, rodeada de olivos centenarios con vistas al mar.",
             "precio": 210
         },
         {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "foto": "img/Montana/valldemosa1.png",
             "nombre": "POSADA DE VALLDEMOSSA",
             "descripcion": "Hotel boutique en el corazón del pintoresco pueblo de Valldemossa, declarado Patrimonio de la Humanidad por la UNESCO.",
             "precio": 350
         },
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
+            "foto": "img/Montana/deia1.png",
             "nombre": "HOTEL DEIÀ MOUNTAIN",
             "descripcion": "Refugio exclusivo en el pueblo de artistas de Deià, con piscina de agua salada y restaurante gastronómico con estrella Michelin.",
             "precio": 520
         },
         {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
+            "foto": "img/Montana/alaro1.png",
             "nombre": "CASTELL D'ALARÓ RESORT",
             "descripcion": "Resort único al pie del Castell d'Alaró, con senderismo exclusivo, helipuerto privado y experiencias de lujo aventura.",
             "precio": 890
         },
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
+            "foto": "img/Montana/tramuntana.png",
             "nombre": "GRAN FINCA TRAMUNTANA",
             "descripcion": "La finca de lujo más exclusiva de la Sierra de Tramuntana, con suite presidencial, spa privado y bodega propia.",
             "precio": 1800
         },
         {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
-            "nombre": "PALAU FORMENTOR",
-            "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
-            "precio": 680
+            "foto": "img/Montana/cura1.png",
+            "nombre": "HOTEL SANTUARI DE CURA",
+            "descripcion": "Hotel de montaña ubicado en el Puig de Randa, rodeado de naturaleza y vistas panorámicas de Mallorca. Un antiguo santuario convertido en alojamiento con encanto, ideal para desconectar y disfrutar de la tranquilidad.",
+            "precio": 320
         }
     ],
     "urbano": [
