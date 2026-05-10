@@ -77,40 +77,40 @@
     ],
     "urbano": [
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
-            "nombre": "HOTEL BORN PALMA",
-            "descripcion": "Hotel de diseño en el centro histórico de Palma, alojado en un palacio del siglo XVI a 5 minutos de la Catedral.",
-            "precio": 195
+            "foto": "img/urbano/nobis.png",
+            "nombre": "NOBIS HOTEL PALMA",
+            "descripcion": "Hotel de lujo contemporáneo ubicado en un antiguo palacio musulmán del siglo XII en el casco histórico de Palma, con rooftop, spa y diseño escandinavo elegante.",
+            "precio": 520
         },
         {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
-            "nombre": "PALAU SA FONT",
-            "descripcion": "Palacio del siglo XVII reconvertido en hotel boutique con patio interior y terraza con vistas panorámicas a la bahía.",
-            "precio": 340
+            "foto": "img/urbano/francesc.png",
+            "nombre": "SANT FRANCESC HOTEL SINGULAR",
+            "descripcion": "Exclusivo hotel boutique de cinco estrellas en una mansión del siglo XIX en Plaza Sant Francesc, con rooftop pool y vistas a la Catedral de Palma.",
+            "precio": 640
         },
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
-            "nombre": "GRAND HOTEL PALMA",
-            "descripcion": "Hotel modernista emblemático de Palma con restauración original y suites únicas, a pasos de la Catedral de Mallorca.",
-            "precio": 480
+            "foto": "img/urbano/Alomar.png",
+            "nombre": "HOTEL CAN ALOMAR",
+            "descripcion": "Palacio histórico convertido en hotel urbano de lujo situado en el Paseo del Born, con suites sofisticadas, spa y terraza panorámica.",
+            "precio": 590
         },
         {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
-            "nombre": "ROOFTOP PALMA SUITES",
-            "descripcion": "Hotel de diseño contemporáneo con piscina en terraza, bar rooftop y vistas de 360° a la Catedral y la bahía de Palma.",
-            "precio": 620
+            "foto": "img/urbano/gloria.png",
+            "nombre": "HOTEL GLÒRIA DE SANT JAUME",
+            "descripcion": "Hotel boutique de lujo en una casa señorial mallorquina del siglo XVI, con spa subterráneo, rooftop y ambiente exclusivo en pleno centro de Palma.",
+            "precio": 470
         },
         {
-            "foto": "img/Playa/CalaDor/calador1.png",
-            "nombre": "PALACIO REAL MALLORCA",
-            "descripcion": "La máxima expresión del lujo urbano en Palma, con suite real de 400m², servicio de Rolls Royce y seguridad las 24h.",
-            "precio": 2500
-        },
-        {
-            "foto": "img/Playa/esTrenc/esTrenc1.png",
-            "nombre": "PALAU FORMENTOR",
-            "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
+            "foto": "img/urbano/cappuccino.png",
+            "nombre": "HOTEL CAPPUCCINO PALMA",
+            "descripcion": "Elegante hotel urbano en Plaza Cort diseñado por Jacques Grange, con cine privado, rooftop bar y decoración artística de alto nivel.",
             "precio": 680
+        },
+        {
+            "foto": "img/urbano/llorenc.png",
+            "nombre": "EL LLORENÇ PARC DE LA MAR",
+            "descripcion": "Hotel adults-only de diseño contemporáneo junto al casco antiguo de Palma, famoso por su infinity pool rooftop y su restaurante gastronómico.",
+            "precio": 610
         }
     ]
 }

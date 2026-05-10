@@ -256,8 +256,6 @@ form button{
     margin-top: 2%;
     margin-bottom: 2%;
     padding: 7px;
-    border-color: grey;
-    background-color: darkgray;
     color: white;
     cursor: pointer;
 }
