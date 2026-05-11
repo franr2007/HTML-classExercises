@@ -24,7 +24,7 @@ function validarContraseña(event){
         document.getElementById('errorLogin').textContent = 'La contraseña tiene que tener almenos un numero';
     }
     else{
-        sessionStorage.setItem('usuario', user);
+        localStorage.setItem('usuario', user);
         window.location.href = 'index.html';
     }
 }
@@ -57,17 +57,19 @@ function comprobarNum(password){
 }
 
 window.onload = function(){
-    if(sessionStorage.getItem('usuario') != null){
+    if(localStorage.getItem('usuario') != null){
         document.getElementById('btnLogin').textContent = '🙍‍♂️CERRAR SESION';
     }
 }
 
 function cerrarSesion(){
-    sessionStorage.removeItem('usuario');
+    localStorage.removeItem('usuario');
     document.getElementById('btnLogin').textContent = '🙍‍♂️INICIAR SESION';
 }
 
+const contenedorSection= document.getElementById('seccionHoteles');
 
+if(contenedorSection){
 fetch('../json/hoteles.json')
   .then(response => response.json())
   .then(jsonData => {
@@ -76,8 +78,9 @@ fetch('../json/hoteles.json')
     cargarHoteles(jsonData.urbano, 'hoteles_urbano');
   })
   .catch(error => {
-    console.error("Error carregant el json:", error);
+    console.error("Error cargando el json:", error);
 });
+}
   
 
 function cargarHoteles(listaHoteles, direccion) {
@@ -88,6 +91,7 @@ function cargarHoteles(listaHoteles, direccion) {
         
         const contenido= document.createElement('article'); // crea un article en el html
         contenido.classList.add('hotel'); //mete la classe hotel en el article
+        
 
         //dentro del article añade el hotel
         contenido.innerHTML = `
@@ -95,11 +99,81 @@ function cargarHoteles(listaHoteles, direccion) {
         <img src="${hotel.foto}" alt="${hotel.nombre}">
         <p>${hotel.descripcion}</p>
         <span>${hotel.precio} €/noche</span>
-        <button class="button">Añadir a favoritos</button>
         `;
+
+        const botonFav = document.createElement('button');
+        botonFav.innerText = "Añadir a favoritos";
+        botonFav.style.cursor = 'pointer';
+
+        botonFav.onclick = function(e){
+            botonFavorito(e, hotel);
+        }
+
+        contenido.onclick = function() {
+            window.location.href = `product.html?nombre=${encodeURIComponent(hotel.nombre)}`;
+        };
+
+        contenido.appendChild(botonFav);
 
         contenedor.appendChild(contenido);
     });
+}
 
-    
+const url = new URLSearchParams(window.location.search);
+const nombreBuscado = url.get('nombre');
+
+if (nombreBuscado) {
+    fetch('/json/hoteles.json')
+        .then(res => res.json())
+        .then(datos => {
+
+            const todos = datos.playa.concat(datos.montaña, datos.urbano);
+
+            let h = null;
+
+            for (let i = 0; i < todos.length; i++) {
+                if (todos[i].nombre === nombreBuscado) {
+                    h = todos[i];
+                break;
+                }
+            }
+
+            if (h) {
+                document.getElementById('nombre_hotel').innerText = h.nombre;
+                document.getElementById('imagen').src = h.foto;
+                document.getElementById('descripcion_hotel').innerText = h.descripcion;
+                document.getElementById('precio_hotel').innerText = h.precio + "€/noche";
+
+                document.getElementById('btnfav').onclick = function(e){
+                    botonFavorito(e, h);
+                };
+            }
+        })
+        .catch(err => console.error("error al cargar el json:", err));
+}
+
+function botonFavorito(e, hotel){
+    e.stopPropagation();
+
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    let existe = false;
+
+    for (let i = 0; i < favoritos.length; i++) {
+        if (favoritos[i] === hotel.nombre) {
+            existe = true;
+        break;
+        }
+    }
+
+    if (!existe) {
+        favoritos.push(hotel.nombre);
+        localStorage.setItem('favoritos', JSON.stringify(favoritos));
+        alert(hotel.nombre + " añadido a favoritos");
+    }
+    else {
+        alert("Este hotel ya está en tus favoritos");
+    }
+            
+            // Aquí iría tu lógica de guardar en LocalStorage, etc.
 }
