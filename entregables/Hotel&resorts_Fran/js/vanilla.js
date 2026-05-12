@@ -2,9 +2,10 @@ const menu = document.querySelector(".menu");
 
 menu.innerHTML = `
     <img src="img/icons/icon.png" class="icono">
-    <a class="btnMenu" href="index.html">✨INICIO</a>
-    <a class="btnMenu" href="hoteles.html">🏩HOTELES</a>
-    <a class="btnMenu" id="btnLogin" href="login.html">🙍‍♂️INICIAR SESION</a>
+    <a class="btnMenu" href="index.html">INICIO</a>
+    <a class="btnMenu" href="hoteles.html">HOTELES</a>
+    <a class="btnMenu" id="btnLogin" href="login.html">INICIAR SESION</a>
+    <a class="btnMenu" id="btnLogin" href="conocenos.html">CONOCENOS</a>
     <a href="favoritos.html"><img src="img/icons/estrella.png" alt="Carrito"></a>
 `;
 
@@ -67,14 +68,25 @@ function comprobarNum(password){
 }
 
 window.onload = function(){
+    const btnLogin = document.getElementById('btnLogin');
+    if (!btnLogin) return;
+
     if(localStorage.getItem('usuario') != null){
-        document.getElementById('btnLogin').textContent = '🙍‍♂️CERRAR SESION';
+        btnLogin.textContent = 'CERRAR SESION';
+        btnLogin.href = '#';
+        btnLogin.onclick = function(e){
+            e.preventDefault();
+            cerrarSesion();
+        };
     }
 }
 
 function cerrarSesion(){
     localStorage.removeItem('usuario');
-    document.getElementById('btnLogin').textContent = '🙍‍♂️INICIAR SESION';
+    const btnLogin = document.getElementById('btnLogin');
+    btnLogin.textContent = 'INICIAR SESION';
+    btnLogin.href = 'login.html';
+    btnLogin.onclick = null;
 }
 
 const contenedorSection= document.getElementById('seccionHoteles');
@@ -112,7 +124,7 @@ function cargarHoteles(listaHoteles, direccion) {
         `;
 
         const botonFav = document.createElement('button');
-        botonFav.innerText = "Añadir a favoritos";
+        botonFav.innerText = "Añadir a favoritos ⭐";
         botonFav.style.cursor = 'pointer';
 
         botonFav.onclick = function(e){
@@ -157,6 +169,15 @@ if (nombreBuscado) {
                 document.getElementById('btnfav').onclick = function(e){
                     botonFavorito(e, h);
                 };
+
+                const contenedorVentajas = document.getElementById('ventajas');
+                if (contenedorVentajas && h.ventajas) {
+                Object.values(h.ventajas).forEach(ventaja => {
+                const p = document.createElement('p');
+                p.textContent = ventaja;
+                contenedorVentajas.appendChild(p);
+    });
+}
             }
         })
         .catch(err => console.error("error al cargar el json:", err));
@@ -184,6 +205,50 @@ function botonFavorito(e, hotel){
     else {
         alert("Este hotel ya está en tus favoritos");
     }
-            
-            // Aquí iría tu lógica de guardar en LocalStorage, etc.
+}
+
+const sectionFav = document.getElementById('sectionfav');
+
+if (sectionFav) {
+    cargarFavoritos();
+}
+
+function cargarFavoritos() {
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    if (favoritos.length === 0) {
+        sectionFav.innerHTML = '<p>No tienes hoteles favoritos guardados.</p>';
+        return;
+    }
+
+    fetch('/json/hoteles.json')
+        .then(res => res.json())
+        .then(datos => {
+            const todos = datos.playa.concat(datos.montaña, datos.urbano);
+
+            favoritos.forEach(nombreFav => {
+                const hotel = todos.find(h => h.nombre === nombreFav);
+                if (!hotel) return;
+
+                const article = document.createElement('article');
+                article.classList.add('articlefav');
+
+                article.innerHTML = `
+                    <img src="${hotel.foto}" alt="${hotel.nombre}">
+                    <p>${hotel.nombre}</p>  
+                    <span>${hotel.precio}€</span>
+                    <button class="btnEliminarFav">Eliminar de favoritos ❌</button>
+                `;
+
+                article.querySelector('.btnEliminarFav').onclick = function () {
+                    let favs = JSON.parse(localStorage.getItem('favoritos')) || [];
+                    favs = favs.filter(f => f !== hotel.nombre);
+                    localStorage.setItem('favoritos', JSON.stringify(favs));
+                    article.remove();
+                };
+
+                sectionFav.appendChild(article);
+            });
+        })
+        .catch(err => console.error("Error cargando favoritos:", err));
 }

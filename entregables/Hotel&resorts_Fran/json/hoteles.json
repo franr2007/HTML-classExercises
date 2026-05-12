@@ -86,15 +86,15 @@
             "descripcion": "Hotel de lujo en primera línea de playa en Palma de Mallorca, con acceso directo a Cala Major, vistas al mar Mediterráneo, spa completo y habitaciones elegantes.",
             "precio": 895,
             "ventajas": {
-        "descripcion": "💎 Máxima exclusividad y privacidad. Una mansión entera a tu disposición frente al mar.",
-        "incluye": "👨‍🍳 Chef privado 24h, chófer a demanda, seguridad privada y helipuerto.",
-        "habitaciones": "🚿 Master suites con jacuzzi exterior, cine privado y vestidores de ensueño.",
-        "restaurante": "🍴 Menús personalizados diariamente según las preferencias del huésped.",
-        "actividades": "🚤 Moto de agua propia, equipo de buceo profesional y cine bajo las estrellas.",
-        "situado": "📍 En un acantilado privado con acceso por túnel a una cala virgen secreta.",
-        "incluye_precio": "✅ Pensión completa de lujo, todos los traslados y servicio de lavandería.",
-        "noIncluye": "❌ Vuelos en helicóptero y compras personales externas."
-      }
+                "descripcion": "🌴 Hotel 5 estrellas frente a la playa de Cala Major, con diseño elegante y ambiente exclusivo en Palma de Mallorca.",
+                "incluye": "🏊 Piscina exterior con vistas al mar, acceso directo a la playa, spa completo y gimnasio totalmente equipado.",
+                "habitaciones": "🛏️ Habitaciones modernas con terraza privada, vistas al Mediterráneo, climatización, minibar y baño de lujo.",
+                "restaurante": "🍽️ Restaurante gourmet con cocina mediterránea e internacional, desayuno buffet premium y bar lounge frente al mar.",
+                "actividades": "💆 Spa con circuito de aguas, masajes, yoga frente al mar y actividades acuáticas en la playa de Cala Major.",
+                "situado": "📍 Ubicado en Cala Major, a pocos minutos del centro de Palma y del castillo de Bellver.",
+                "incluye_precio": "✅ Desayuno buffet, acceso al spa, piscina, gimnasio y wifi de alta velocidad.",
+                "noIncluye": "❌ Parking premium, tratamientos de spa especializados y servicios de traslado privado."
+            }
         }
     ],
     "montaña": [
@@ -102,37 +102,97 @@
             "foto": "img/Montana/Marroig1.png",
             "nombre": "FINCA SON MARROIG",
             "descripcion": "Finca rústica restaurada en la Sierra de Tramuntana, rodeada de olivos centenarios con vistas al mar.",
-            "precio": 210
+            "precio": 210,
+            "ventajas": {
+                "descripcion": "🌿 Finca histórica en plena Sierra de Tramuntana con vistas espectaculares al Mediterráneo.",
+                "incluye": "🍷 Piscina exterior, jardines mediterráneos y acceso a miradores privados.",
+                "habitaciones": "🛏️ Habitaciones rústicas con vigas de madera, decoración tradicional mallorquina y vistas a la montaña.",
+                "restaurante": "🥘 Cocina local con productos de la finca, aceite de oliva propio y cenas al aire libre.",
+                "actividades": "🚶 Rutas de senderismo, visitas a olivares y paseos guiados por la finca.",
+                "situado": "📍 En la Sierra de Tramuntana, rodeado de naturaleza protegida y patrimonio cultural.",
+                "incluye_precio": "✅ Desayuno casero, acceso a piscina y aparcamiento gratuito.",
+                "noIncluye": "❌ Excursiones privadas y transporte desde el aeropuerto."
+            }
         },
         {
             "foto": "img/Montana/valldemosa1.png",
             "nombre": "POSADA DE VALLDEMOSSA",
             "descripcion": "Hotel boutique en el corazón del pintoresco pueblo de Valldemossa, declarado Patrimonio de la Humanidad por la UNESCO.",
-            "precio": 350
+            "precio": 350,
+            "ventajas": {
+                "descripcion": "🏡 Encanto histórico en uno de los pueblos más bonitos de Mallorca.",
+                "incluye": "☕ Patio interior, terraza panorámica y ambiente romántico exclusivo.",
+                "habitaciones": "🛏️ Habitaciones elegantes con decoración clásica mallorquina y vistas al pueblo o la montaña.",
+                "restaurante": "🍽️ Restaurante gourmet con cocina local reinventada y productos de kilómetro cero.",
+                "actividades": "🎨 Visitas culturales, rutas por Valldemossa y excursiones a la Sierra de Tramuntana.",
+                "situado": "📍 En el centro histórico de Valldemossa, entre calles empedradas y naturaleza.",
+                "incluye_precio": "✅ Desayuno artesanal, wifi y acceso a terraza panorámica.",
+                "noIncluye": "❌ Aparcamiento privado y excursiones guiadas."
+            }
         },
         {
             "foto": "img/Montana/deia1.png",
             "nombre": "HOTEL DEIÀ MOUNTAIN",
             "descripcion": "Refugio exclusivo en el pueblo de artistas de Deià, con piscina de agua salada y restaurante gastronómico con estrella Michelin.",
-            "precio": 520
+            "precio": 520,
+            "ventajas": {
+                "descripcion": "🎨 Hotel boutique en el icónico pueblo de artistas de Deià.",
+                "incluye": "🏊 Piscina infinity de agua salada, vistas al mar y zonas chill-out.",
+                "habitaciones": "🛏️ Suites de diseño contemporáneo con terraza privada y vistas al valle.",
+                "restaurante": "⭐ Restaurante Michelin con cocina de autor basada en productos locales.",
+                "actividades": "🎶 Conciertos íntimos, rutas artísticas y senderismo por la costa norte.",
+                "situado": "📍 En el corazón de Deià, entre montaña y mar.",
+                "incluye_precio": "✅ Desayuno gourmet, acceso a piscina y gimnasio boutique.",
+                "noIncluye": "❌ Cenas degustación Michelin y transporte privado."
+            }
         },
         {
             "foto": "img/Montana/alaro1.png",
             "nombre": "CASTELL D'ALARÓ RESORT",
             "descripcion": "Resort único al pie del Castell d'Alaró, con senderismo exclusivo, helipuerto privado y experiencias de lujo aventura.",
-            "precio": 890
+            "precio": 890,
+            "ventajas": {
+                "descripcion": "🏰 Experiencia de lujo en plena montaña con vistas al histórico Castell d'Alaró.",
+                "incluye": "🚁 Helipuerto privado, piscina panorámica y servicio de concierge 24h.",
+                "habitaciones": "🛏️ Suites modernas con ventanales al valle y diseño minimalista de lujo.",
+                "restaurante": "🍷 Restaurante de alta cocina con menú degustación de montaña.",
+                "actividades": "🥾 Senderismo privado al castillo, escalada y rutas en e-bike.",
+                "situado": "📍 En la base del Castell d'Alaró, rodeado de naturaleza salvaje.",
+                "incluye_precio": "✅ Desayuno gourmet, acceso a piscina y actividades guiadas.",
+                "noIncluye": "❌ Vuelos en helicóptero privados y cenas especiales privadas."
+            }
         },
         {
             "foto": "img/Montana/tramuntana.png",
             "nombre": "GRAN FINCA TRAMUNTANA",
             "descripcion": "La finca de lujo más exclusiva de la Sierra de Tramuntana, con suite presidencial, spa privado y bodega propia.",
-            "precio": 1800
+            "precio": 1800,
+            "ventajas": {
+                "descripcion": "💎 Ultra lujo en una finca privada en el corazón de la Serra de Tramuntana.",
+                "incluye": "🏊 Piscina infinita privada, spa completo y finca completamente exclusiva.",
+                "habitaciones": "🛏️ Suite presidencial con vistas panorámicas y servicio de mayordomo.",
+                "restaurante": "🍽️ Chef privado con menús personalizados y bodega exclusiva.",
+                "actividades": "🚴 Rutas privadas, yoga en la montaña y experiencias de bienestar.",
+                "situado": "📍 En una finca aislada de la Serra de Tramuntana, máxima privacidad.",
+                "incluye_precio": "✅ Todo incluido de lujo con chef, spa y concierge personal.",
+                "noIncluye": "❌ Transporte en helicóptero y compras externas."
+            }
         },
         {
             "foto": "img/Montana/cura1.png",
             "nombre": "HOTEL SANTUARI DE CURA",
             "descripcion": "Hotel de montaña ubicado en el Puig de Randa, rodeado de naturaleza y vistas panorámicas de Mallorca. Un antiguo santuario convertido en alojamiento con encanto, ideal para desconectar y disfrutar de la tranquilidad.",
-            "precio": 320
+            "precio": 320,
+            "ventajas": {
+                "descripcion": "⛪ Alojamiento histórico en un antiguo santuario con vistas 360º de Mallorca.",
+                "incluye": "🌄 Terraza panorámica, jardines tranquilos y ambiente espiritual único.",
+                "habitaciones": "🛏️ Habitaciones sencillas pero acogedoras con vistas a la isla o montaña.",
+                "restaurante": "🍽️ Cocina tradicional mallorquina con productos locales frescos.",
+                "actividades": "🙏 Senderismo, meditación y visitas al santuario histórico.",
+                "situado": "📍 En la cima del Puig de Randa, uno de los miradores más altos de Mallorca.",
+                "incluye_precio": "✅ Desayuno, parking y acceso a miradores.",
+                "noIncluye": "❌ Transporte guiado y cenas especiales."
+            }
         }
     ],
     "urbano": [
@@ -140,37 +200,97 @@
             "foto": "img/urbano/nobis.png",
             "nombre": "NOBIS HOTEL PALMA",
             "descripcion": "Hotel de lujo contemporáneo ubicado en un antiguo palacio musulmán del siglo XII en el casco histórico de Palma, con rooftop, spa y diseño escandinavo elegante.",
-            "precio": 520
+            "precio": 520,
+            "ventajas": {
+                "descripcion": "🏛️ Hotel de diseño en un palacio histórico del siglo XII en pleno centro de Palma.",
+                "incluye": "🌿 Rooftop con vistas a la ciudad, spa moderno y zonas comunes de diseño escandinavo.",
+                "habitaciones": "🛏️ Habitaciones minimalistas con materiales nobles, luz natural y confort premium.",
+                "restaurante": "🍽️ Restaurante contemporáneo con cocina mediterránea moderna y productos locales.",
+                "actividades": "🚶 Visitas culturales por el casco antiguo, museos y compras en boutiques cercanas.",
+                "situado": "📍 En el casco histórico de Palma, cerca de la Catedral y calles emblemáticas.",
+                "incluye_precio": "✅ Acceso a spa, gimnasio, wifi y desayuno gourmet.",
+                "noIncluye": "❌ Parking privado y bebidas premium del minibar."
+            }
         },
         {
             "foto": "img/urbano/francesc.png",
             "nombre": "SANT FRANCESC HOTEL SINGULAR",
             "descripcion": "Exclusivo hotel boutique de cinco estrellas en una mansión del siglo XIX en Plaza Sant Francesc, con rooftop pool y vistas a la Catedral de Palma.",
-            "precio": 640
+            "precio": 640,
+            "ventajas": {
+                "descripcion": "⛪ Mansión histórica transformada en hotel boutique en una de las plazas más elegantes de Palma.",
+                "incluye": "🏊 Rooftop pool con vistas a la Catedral y servicio de concierge exclusivo.",
+                "habitaciones": "🛏️ Suites elegantes con decoración clásica y tecnología moderna integrada.",
+                "restaurante": "🍷 Restaurante gourmet con cocina de autor y terraza interior tranquila.",
+                "actividades": "🎨 Rutas culturales, visitas a galerías y experiencias gastronómicas.",
+                "situado": "📍 Plaza Sant Francesc, en pleno centro histórico de Palma.",
+                "incluye_precio": "✅ Desayuno gourmet, acceso a piscina rooftop y gimnasio.",
+                "noIncluye": "❌ Tratamientos de spa premium y transporte privado."
+            }
         },
         {
             "foto": "img/urbano/Alomar.png",
             "nombre": "HOTEL CAN ALOMAR",
             "descripcion": "Palacio histórico convertido en hotel urbano de lujo situado en el Paseo del Born, con suites sofisticadas, spa y terraza panorámica.",
-            "precio": 590
+            "precio": 590,
+            "ventajas": {
+                "descripcion": "🏛️ Palacio urbano en el exclusivo Paseo del Born de Palma.",
+                "incluye": "🌇 Terraza panorámica con vistas al centro, spa y servicio personalizado.",
+                "habitaciones": "🛏️ Suites amplias con diseño elegante, mármol y detalles históricos restaurados.",
+                "restaurante": "🍽️ Cocina mediterránea de alta gama con productos frescos locales.",
+                "actividades": "🛍️ Shopping de lujo, visitas culturales y vida nocturna en el centro.",
+                "situado": "📍 Paseo del Born, una de las avenidas más exclusivas de Palma.",
+                "incluye_precio": "✅ Desayuno buffet premium, spa y wifi de alta velocidad.",
+                "noIncluye": "❌ Parking y experiencias privadas guiadas."
+            }
         },
         {
             "foto": "img/urbano/gloria.png",
             "nombre": "HOTEL GLÒRIA DE SANT JAUME",
             "descripcion": "Hotel boutique de lujo en una casa señorial mallorquina del siglo XVI, con spa subterráneo, rooftop y ambiente exclusivo en pleno centro de Palma.",
-            "precio": 470
+            "precio": 470,
+            "ventajas": {
+                "descripcion": "🏡 Casa señorial del siglo XVI convertida en hotel boutique exclusivo.",
+                "incluye": "💆 Spa subterráneo, rooftop con vistas y piscina interior.",
+                "habitaciones": "🛏️ Habitaciones elegantes con mezcla de tradición mallorquina y diseño moderno.",
+                "restaurante": "🍷 Restaurante íntimo con cocina mediterránea creativa.",
+                "actividades": "🚶 Paseos culturales por el centro histórico y experiencias wellness.",
+                "situado": "📍 Centro histórico de Palma, cerca de calles comerciales y monumentos.",
+                "incluye_precio": "✅ Acceso a spa, piscina interior y desayuno gourmet.",
+                "noIncluye": "❌ Parking privado y tratamientos de spa avanzados."
+            }
         },
         {
             "foto": "img/urbano/cappuccino.png",
             "nombre": "HOTEL CAPPUCCINO PALMA",
             "descripcion": "Elegante hotel urbano en Plaza Cort diseñado por Jacques Grange, con cine privado, rooftop bar y decoración artística de alto nivel.",
-            "precio": 680
+            "precio": 680,
+            "ventajas": {
+                "descripcion": "🎨 Hotel de diseño artístico en Plaza Cort con fuerte identidad creativa.",
+                "incluye": "🍸 Rooftop bar, cine privado y zonas comunes de diseño exclusivo.",
+                "habitaciones": "🛏️ Habitaciones únicas con decoración ecléctica y lujo contemporáneo.",
+                "restaurante": "🍽️ Gastronomía internacional con enfoque moderno y creativo.",
+                "actividades": "🎬 Cine privado, eventos culturales y vida nocturna urbana.",
+                "situado": "📍 Plaza Cort, en el corazón de Palma junto al ayuntamiento.",
+                "incluye_precio": "✅ Desayuno gourmet, acceso a cine y rooftop.",
+                "noIncluye": "❌ Parking y servicios de transporte privado."
+            }
         },
         {
             "foto": "img/urbano/llorenc.png",
             "nombre": "EL LLORENÇ PARC DE LA MAR",
             "descripcion": "Hotel adults-only de diseño contemporáneo junto al casco antiguo de Palma, famoso por su infinity pool rooftop y su restaurante gastronómico.",
-            "precio": 610
+            "precio": 610,
+            "ventajas": {
+                "descripcion": "🌊 Hotel adults-only con vistas directas al Parc de la Mar y la Catedral.",
+                "incluye": "🏊 Infinity pool en rooftop, gimnasio y zonas de relax exclusivas.",
+                "habitaciones": "🛏️ Suites modernas con vistas al mar o a la Catedral de Palma.",
+                "restaurante": "🍽️ Restaurante gastronómico con cocina mediterránea de autor.",
+                "actividades": "🌇 Experiencias urbanas, rutas culturales y vida nocturna premium.",
+                "situado": "📍 Junto al Parc de la Mar, a los pies de la Catedral de Palma.",
+                "incluye_precio": "✅ Desayuno gourmet, acceso a piscina infinity y gimnasio.",
+                "noIncluye": "❌ Parking y bebidas premium."
+            }
         }
     ]
 }

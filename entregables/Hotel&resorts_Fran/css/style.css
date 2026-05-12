@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans&display=swap');
+
 body{
     color: #0d3d4f;
     background-image: url('../img/fondo-hoteles.png');
     background-repeat: round;
     margin: 0;
+    font-family: 'Elms Sans', sans-serif;
 }
 
 body h1, body h2, body h3{
@@ -66,7 +69,7 @@ header h1 span {
 
 .btnMenu{
     text-align: center;
-    padding-top: 8px;
+    padding-top: 10px;
     background-color: #0c3a4b;
     text-decoration-line: none;
     min-width: 150px;
@@ -119,6 +122,65 @@ section h1, body h2, body h3, body p, body span, body img{
 }
 
 .check a{
+    color: #0d3d4f;
+}
+
+.seccionDestacado {
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.pDestacado{
+    height: 300px;
+    max-width: 300px;
+}
+
+.pDestacado p{
+    text-align: left;
+    font-size: 20px;
+}
+
+.destacado {
+    background: white;
+    border: 1px solid #00000043;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.destacado:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.destacado img {
+    margin-top: 10px;
+    width: 98%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.destacado h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.destacado p {
+    margin: 0 10px 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.destacado span {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
     color: #0d3d4f;
 }
 
@@ -211,10 +273,12 @@ section h1, body h2, body h3, body p, body span, body img{
 .producto div{
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
 }
 
 .producto img{
-    width: 60%;
+    margin-left: 3%;
+    width: 50%;
     border-radius: 50px;
     height: 100%;
     max-height: 500px;
@@ -225,6 +289,7 @@ section h1, body h2, body h3, body p, body span, body img{
 }
 .producto p{
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .producto button{
@@ -334,6 +399,7 @@ footer>p {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-left: 1.5%;
     margin-right: 1.5%;
+    margin-bottom: 10px;
 }
 
 .articlefav:hover {
@@ -363,6 +429,17 @@ footer>p {
     background-color: #7a1c11;
 }
 
+/* conocenos */
+
+.sectionConocenos h1,
+.sectionConocenos h2,
+.sectionConocenos h3,
+.sectionConocenos p,
+.sectionConocenos span {
+    text-align: left !important;
+    margin-left: 10px;
+}
+
 /* movil/tablet settings */
 
 @media (max-width: 1100px){
@@ -370,5 +447,37 @@ footer>p {
         display: grid;
         grid-template-columns: 100%;
         margin-top: 40px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icono {
+        width: 60px;
+    }
+
+    .check {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    .seccionDestacado {
+        grid-template-columns: 100%;
+    }
+
+    .destacado p{
+        margin-bottom: 50px;
+        width: 500px;
     }
 }

@@ -5,6 +5,19 @@
         "foto":        { "type": "string" },
         "nombre":      { "type": "string" },
         "descripcion": { "type": "string" },
-        "precio":      { "type": "number" }
+        "precio":      { "type": "number" },
+        "ventajas": {
+            "type": "object",
+            "properties": {
+              "descripcion": { "type": "string" },
+              "incluye": { "type": "string" },
+              "habitaciones": { "type": "string" },
+              "restaurante": { "type": "string" },
+              "actividades": { "type": "string" },
+              "situado": { "type": "string" },
+              "incluye_precio": { "type": "string" },
+              "noIncluye": { "type": "string" }
+            }
+        }
     }
 }
