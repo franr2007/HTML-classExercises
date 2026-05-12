@@ -3,38 +3,98 @@
         {
             "foto": "../img/Playa/calador1.png",
             "nombre": "HOTEL CALA D'OR",
-            "descripcion": "Encantador hotel de 4 estrellas situado en primera línea de playa en Cala d'Or, con vistas espectaculares al mar Mediterráneo.",
-            "precio": 180
+            "descripcion": "Encantador hotel de 4 estrellas situado en primera línea de playa en Cala d'Or.",
+            "precio": 180,
+            "ventajas": {
+                "descripcion": "🏨 Resort de 4 estrellas ubicado en la idílica Cala d'Or, Mallorca. Vistas incomparables al mar Mediterráneo.",
+                "incluye": "🌊 Piscina infinita, acceso directo a la playa privada, spa y restaurante gourmet mediterráneo.",
+                "habitaciones": "🛏️ Terraza privada, aire acondicionado, minibar, caja fuerte y baño de lujo con productos premium.",
+                "restaurante": "🍽️ Desayuno buffet con productos locales, bar de piscina y servicio de habitaciones 24h.",
+                "actividades": "🧖 Centro de bienestar con sauna, baño turco, jacuzzi y tratamientos corporales.",
+                "situado": "📍 A 5 minutos a pie del centro de Cala d'Or, ideal para snorkel, kayak y paddle surf.",
+                "incluye_precio": "✅ Desayuno buffet, acceso a piscina y playa, wifi de alta velocidad y parking gratuito.",
+                "noIncluye": "❌ Traslados al aeropuerto, actividades acuáticas motorizadas y tratamientos de spa."
+            }
         },
         {
             "foto": "../img/Playa/esTrenc1.png",
             "nombre": "RESORT ES TRENC",
-            "descripcion": "Resort exclusivo junto a la playa virgen de Es Trenc, considerada una de las aguas más cristalinas de Mallorca.",
-            "precio": 320
+            "descripcion": "Resort exclusivo junto a la playa virgen de Es Trenc, de aguas cristalinas.",
+            "precio": 320,
+            "ventajas": {
+                "descripcion": "🏖️ Ubicado en un entorno protegido único, junto a la playa más famosa y virgen de la isla.",
+                "incluye": "🍹 Beach Club exclusivo con hamacas balinesas y servicio de coctelería en la arena.",
+                "habitaciones": "💤 Diseño mediterráneo minimalista con materiales sostenibles y vistas a las salinas.",
+                "restaurante": "🥗 Restaurante 'Sal de Cocó' con pescados frescos capturados en la zona de Colonia de Sant Jordi.",
+                "actividades": "🚲 Alquiler de bicicletas eléctricas para recorrer el sistema dunar y visitas a las salinas.",
+                "situado": "📍 Acceso directo desde el resort a la zona virgen de Es Trenc, lejos de las aglomeraciones.",
+                "incluye_precio": "✅ Set de playa (toallas y sombrilla), parking privado y acceso al club social.",
+                "noIncluye": "❌ Consumo de minibar y cenas temáticas de marisco."
+            }
         },
         {
-            "foto": "img/Playa/Alcudia1.png",
+            "foto": "../img/Playa/Alcudia1.png",
             "nombre": "GRAN HOTEL ALCÚDIA",
-            "descripcion": "Hotel de 5 estrellas con spa y piscina infinita en la bahía de Alcúdia, con acceso directo a la playa de arena fina.",
-            "precio": 450
+            "descripcion": "Hotel de 5 estrellas con spa y piscina infinita en la bahía de Alcúdia.",
+            "precio": 450,
+            "ventajas": {
+                "descripcion": "🌟 Lujo contemporáneo en el norte de Mallorca. Un paraíso de 5 estrellas frente al mar.",
+                "incluye": "🏊 Piscina semi-olímpica, gimnasio de última generación y spa de 1000 metros cuadrados.",
+                "habitaciones": "📱 Habitaciones inteligentes controladas por iPad con vistas panorámicas a la bahía.",
+                "restaurante": "🍣 Tres restaurantes: Buffet internacional, Italiano artesanal y Sushi Bar de autor.",
+                "actividades": "🎾 Pistas de tenis de tierra batida, clases de yoga frente al mar y club náutico.",
+                "situado": "📍 Ubicación privilegiada en el Puerto de Alcúdia, cerca de la ciudad amurallada medieval.",
+                "incluye_precio": "✅ Acceso diario al circuito térmico del spa, desayuno gourmet y kids club.",
+                "noIncluye": "❌ Bebidas alcohólicas premium y excursiones privadas en barco."
+            }
         },
         {
-            "foto": "img/Playa/Formentor1.png",
+            "foto": "../img/Playa/Formentor1.png",
             "nombre": "PALAU FORMENTOR",
-            "descripcion": "Hotel icónico inaugurado en 1929 en el Cap de Formentor, declarado monumento nacional y favorito de reyes y artistas.",
-            "precio": 680
+            "descripcion": "Hotel icónico de 1929 en el Cap de Formentor, monumento nacional.",
+            "precio": 680,
+            "ventajas": {
+                "descripcion": "🏛️ Historia viva de la isla. Antigua residencia de artistas, poetas y jefes de estado.",
+                "incluye": "🌲 1.200 hectáreas de bosque mediterráneo privado y cala exclusiva con embarcadero.",
+                "habitaciones": "🎻 Estilo aristocrático con muebles antiguos, pianos en las suites y bibliotecas privadas.",
+                "restaurante": "🍷 Cocina de mercado de altísimo nivel con una de las bodegas más grandes de Baleares.",
+                "actividades": "🎨 Retiros de escritura, conciertos de música clásica y senderismo por los acantilados.",
+                "situado": "📍 El punto más septentrional de Mallorca, un enclave de absoluta privacidad y silencio.",
+                "incluye_precio": "✅ Servicio de mayordomo, acceso a cala privada y parking con vigilancia.",
+                "noIncluye": "❌ Alquiler de yates privados y cenas románticas en el faro."
+            }
         },
         {
-            "foto": "img/Playa/Marina1.png",
+            "foto": "../img/Playa/Marina1.png",
             "nombre": "VILLA MARINA LUXURY",
-            "descripcion": "Villa privada de lujo con acceso exclusivo a cala privada, servicio de butler personal y chef privado las 24 horas.",
-            "precio": 1200
+            "descripcion": "Villa privada de lujo con acceso exclusivo a cala privada y servicio personal.",
+            "precio": 1200,
+            "ventajas": {
+                "descripcion": "💎 Máxima exclusividad y privacidad. Una mansión entera a tu disposición frente al mar.",
+                "incluye": "👨‍🍳 Chef privado 24h, chófer a demanda, seguridad privada y helipuerto.",
+                "habitaciones": "🚿 Master suites con jacuzzi exterior, cine privado y vestidores de ensueño.",
+                "restaurante": "🍴 Menús personalizados diariamente según las preferencias del huésped.",
+                "actividades": "🚤 Moto de agua propia, equipo de buceo profesional y cine bajo las estrellas.",
+                "situado": "📍 En un acantilado privado con acceso por túnel a una cala virgen secreta.",
+                "incluye_precio": "✅ Pensión completa de lujo, todos los traslados y servicio de lavandería.",
+                "noIncluye": "❌ Vuelos en helicóptero y compras personales externas."
+            }
         },
         {
             "foto": "img/Playa/Nixie1.png",
             "nombre": "HOTEL NIXE PALACE",
             "descripcion": "Hotel de lujo en primera línea de playa en Palma de Mallorca, con acceso directo a Cala Major, vistas al mar Mediterráneo, spa completo y habitaciones elegantes.",
-            "precio": 895
+            "precio": 895,
+            "ventajas": {
+        "descripcion": "💎 Máxima exclusividad y privacidad. Una mansión entera a tu disposición frente al mar.",
+        "incluye": "👨‍🍳 Chef privado 24h, chófer a demanda, seguridad privada y helipuerto.",
+        "habitaciones": "🚿 Master suites con jacuzzi exterior, cine privado y vestidores de ensueño.",
+        "restaurante": "🍴 Menús personalizados diariamente según las preferencias del huésped.",
+        "actividades": "🚤 Moto de agua propia, equipo de buceo profesional y cine bajo las estrellas.",
+        "situado": "📍 En un acantilado privado con acceso por túnel a una cala virgen secreta.",
+        "incluye_precio": "✅ Pensión completa de lujo, todos los traslados y servicio de lavandería.",
+        "noIncluye": "❌ Vuelos en helicóptero y compras personales externas."
+      }
         }
     ],
     "montaña": [

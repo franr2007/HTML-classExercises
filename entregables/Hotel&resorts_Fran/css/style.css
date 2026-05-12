@@ -64,7 +64,8 @@ header h1 span {
 }
 
 .menu img{
-    width: 4%;
+    width: 2.5%;
+    height: 38px;
     background-color: #e0f4fa;
     border-radius: 100px;
     margin-top: 10px;
