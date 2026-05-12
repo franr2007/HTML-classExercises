@@ -1,3 +1,13 @@
+const menu = document.querySelector(".menu");
+
+menu.innerHTML = `
+    <img src="img/icons/icon.png" class="icono">
+    <a class="btnMenu" href="index.html">✨INICIO</a>
+    <a class="btnMenu" href="hoteles.html">🏩HOTELES</a>
+    <a class="btnMenu" id="btnLogin" href="login.html">🙍‍♂️INICIAR SESION</a>
+    <a href="favoritos.html"><img src="img/icons/estrella.png" alt="Carrito"></a>
+`;
+
 function validarContraseña(event){
     event.preventDefault();
     let user=document.getElementById('email').value;
