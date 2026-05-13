@@ -1,8 +1,13 @@
-// Selecciona el elemento <menu class="menu"> del HTML y le inyecta el contenido del menú de navegación
+// Selecciona la clase menu del HTML y le mete todo el contenido html
 const menu = document.querySelector(".menu");
 
+//contenido html:
 menu.innerHTML = `
     <img src="img/icons/icon.png" class="icono">
+    <select>
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+    </select>
     <a class="btnMenu" href="index.html">INICIO</a>
     <a class="btnMenu" href="hoteles.html">HOTELES</a>
     <a class="btnMenu" id="btnLogin" href="login.html">INICIAR SESION</a>
@@ -10,18 +15,18 @@ menu.innerHTML = `
     <a href="favoritos.html"><img src="img/icons/estrella.png" alt="Carrito"></a>
 `;
 
-// ─── VALIDACIÓN DEL FORMULARIO DE LOGIN ──────────────────────────────────────
+//validacion formulario
 
-// Se ejecuta cuando el usuario pulsa "Enviar" en el formulario de login
-// El parámetro "event" representa el evento de envío del formulario
+//se ejecuta al pusar el boton 'iniciar sesion'
+//el parametro de la funcion 'event' es la accion de cuando le das al boton
 function validarContraseña(event){
-    event.preventDefault(); // Cancela el envío real del formulario para validar primero
+    event.preventDefault(); //para la accion del boton para validar primero
 
-    // Recoge los valores escritos en los campos email y password
+    // Recoge los datos de email y password
     let user = document.getElementById('email').value;
     let password = document.getElementById('password').value;
 
-    // Comprueba cada condición en orden y muestra el error correspondiente
+    //validacion
     if(user == ""){
         document.getElementById('errorLogin').textContent = 'Rellena el campo del email';
     }
@@ -44,24 +49,25 @@ function validarContraseña(event){
         document.getElementById('errorLogin').textContent = 'La contraseña tiene que tener almenos un numero';
     }
     else{
-        // Si todo es correcto: guarda el email en localStorage y redirige al inicio
+        // Si todo esta bien, guarda en localstorage el email como usuario
         localStorage.setItem('usuario', user);
-        window.location.href = 'index.html';
+        window.location.href = 'index.html'; //y redirige al inicio
     }
 }
 
-// Recorre la contraseña carácter a carácter buscando una mayúscula
-// Devuelve true si encuentra una, false si no
+//funcion que comprueba las mayusculas
 function comprobarMayusculas(password){
+    //bucle que recorre toda la contraseña caracter por caracter
     for(let i = 0; i < password.length; i++){
-        if(password[i] >= 'A' && password[i] <= 'Z'){
+        //condicion que comprueba si tiene mayuscula
+        if(password[i] >= 'A' && password[i] <= 'Z'){//valor lexicografico
             return true;
         }
     }
     return false;
 }
 
-// Igual que la anterior pero busca una minúscula
+//igual que el anterior pero con las minusculas
 function comprobarMinuscula(password){
     for(let i = 0; i < password.length; i++){
         if(password[i] >= 'a' && password[i] <= 'z'){
@@ -71,7 +77,7 @@ function comprobarMinuscula(password){
     return false;
 }
 
-// Igual que las anteriores pero busca un dígito numérico
+//igual que las anteriores pero con numeros
 function comprobarNum(password){
     for(let i = 0; i < password.length; i++){
         if(password[i] >= '0' && password[i] <= '9'){
@@ -81,66 +87,67 @@ function comprobarNum(password){
     return false;
 }
 
-// ─── SESIÓN DE USUARIO ───────────────────────────────────────────────────────
+//iniciar sesion
 
-// Se ejecuta cuando la página termina de cargar completamente
+//window.onload lo que hace es que se ejecuta cuando la página termina de cargar completamente
 window.onload = function(){
+    //reoje el boton de iniciar sesion
     const btnLogin = document.getElementById('btnLogin');
-    if (!btnLogin) return; // Si el botón no existe en esta página, no hace nada
 
-    // Si hay un usuario guardado en localStorage, cambia el botón a "CERRAR SESION"
+    //si hay un usuario en localStorage, cambia el contenido del boton a cerrar sesion
     if(localStorage.getItem('usuario') != null){
         btnLogin.textContent = 'CERRAR SESION';
-        btnLogin.href = '#'; // Desactiva la navegación del enlace
         btnLogin.onclick = function(e){
-            e.preventDefault(); // Evita que el href # haga scroll arriba
+            e.preventDefault(); //esto evita que no vaya al la pagina iniciar sesion
             cerrarSesion();
         };
     }
 }
 
-// Elimina el usuario del localStorage y restaura el botón a su estado original
+//funcion que elimina el usuario guardado en localstorage
+//y cambia el contenido del btn a iniciar sesion
 function cerrarSesion(){
-    localStorage.removeItem('usuario');
+    localStorage.removeItem('usuario');//lo elimina de local storage
     const btnLogin = document.getElementById('btnLogin');
     btnLogin.textContent = 'INICIAR SESION';
     btnLogin.href = 'login.html';
-    btnLogin.onclick = null; // Elimina el evento de cerrar sesión que se había asignado
 }
 
-// ─── CARGA DE HOTELES EN hoteles.html ────────────────────────────────────────
+//cargar hoteles
 
-// Comprueba si existe el contenedor de hoteles (solo existe en hoteles.html)
-// Si no existe, este bloque se salta completamente
+//comprueba si existe seccionHoteles
+//si no existe significa que no esta en la pagina hoteles, entonces no es necesario hacer nada
 const contenedorSection = document.getElementById('seccionHoteles');
 
+//si existe el section de hoteles
 if(contenedorSection){
-    // Hace una petición al archivo JSON que contiene todos los hoteles
+    //recoje los datos del json de los hoteles
     fetch('../json/hoteles.json')
-        .then(response => response.json()) // Convierte la respuesta a objeto JavaScript
+        .then(res => res.json()) //el resultado se convierte en un objeto js
         .then(jsonData => {
-            // Llama a cargarHoteles para cada categoría, pasando el array y el id del contenedor
+            //llama a la funcion cargarHoteles por cada seccion
+            //y le pasa el array correspondiente y el id del contenedor donde se situaran
             cargarHoteles(jsonData.playa,   'hoteles_playa');
             cargarHoteles(jsonData.montaña, 'hoteles_montaña');
             cargarHoteles(jsonData.urbano,  'hoteles_urbano');
         })
         .catch(error => {
-            console.error("Error cargando el json:", error); // Muestra el error en consola si falla
+            console.error("Error cargando el json:", error); //si falla al cargar el json, muestra un error
         });
 }
 
-// Recibe un array de hoteles y el id del contenedor donde pintarlos
-function cargarHoteles(listaHoteles, direccion) {
-    const contenedor = document.getElementById(direccion);
+//recibe el array del json y el id del contenedor
+function cargarHoteles(listaHoteles, id) {
+    const contenedor = document.getElementById(id);
 
-    // Recorre cada hotel del array
+    //recorre la lista por cada hotel
     listaHoteles.forEach(hotel => {
 
-        // Crea un <article> y le añade la clase "hotel"
+        //crea un article y le añade la clase hotel
         const contenido = document.createElement('article');
         contenido.classList.add('hotel');
 
-        // Rellena el article con los datos del hotel usando template literals (${})
+        //rellena el article con los datos del hotel con sus respectivos elementos
         contenido.innerHTML = `
             <h3>${hotel.nombre}</h3>
             <img src="${hotel.foto}" alt="${hotel.nombre}">
@@ -148,91 +155,100 @@ function cargarHoteles(listaHoteles, direccion) {
             <span>${hotel.precio} €/noche</span>
         `;
 
-        // Crea el botón de favoritos por separado (para poder asignarle el evento sin conflicto)
+        //aqui se crea el boton de favoritos por separado para añadirle la accion que tendra
         const botonFav = document.createElement('button');
         botonFav.innerText = "Añadir a favoritos ⭐";
         botonFav.style.cursor = 'pointer';
 
-        // Al hacer clic en el botón llama a botonFavorito pasando el evento y el hotel
+        //al hacer click en el boton llama a la funcion botonFavorito
         botonFav.onclick = function(e){
+            //se le pasa la funcion del evento y el hotel en concreto
             botonFavorito(e, hotel);
         };
 
-        // Al hacer clic en el article (la tarjeta entera) navega a la página del hotel
-        // encodeURIComponent convierte el nombre a un formato válido para la URL
+        //al hacer click en el article llevara a la pagina product.html con el hotel seleccionado
         contenido.onclick = function() {
+            //con ?nombre se usa como get
+            //y recogemos el nomrbre del hotel para ir a esa pagina pero con la info del hotel
+            //encodeURIComponent convierte el nombre a un formato válido para la URL
             window.location.href = `product.html?nombre=${encodeURIComponent(hotel.nombre)}`;
         };
 
-        contenido.appendChild(botonFav);    // Mete el botón dentro del article
-        contenedor.appendChild(contenido);  // Mete el article dentro del contenedor del HTML
+        contenido.appendChild(botonFav);    //se mete el boton de favoritos en el contenido del article
+        contenedor.appendChild(contenido);  //y el article se mete en la seccion adecuada
     });
 }
 
-// ─── CARGA DEL HOTEL EN product.html ─────────────────────────────────────────
+//cargar hotel en product.html
 
-// Lee los parámetros de la URL actual (ej: product.html?nombre=HOTEL CALA D'OR)
+//se crea una url que lea la ubicacion actual
 const url = new URLSearchParams(window.location.search);
-const nombreBuscado = url.get('nombre'); // Extrae el valor del parámetro "nombre"
+const nombreBuscado = url.get('nombre'); //y de la url se recoje el nombre
 
-// Solo se ejecuta si hay un parámetro "nombre" en la URL (es decir, si estamos en product.html)
+//si nombreBuscado tiene un nombre
 if (nombreBuscado) {
+    //carga el json
     fetch('/json/hoteles.json')
-        .then(res => res.json())
+        .then(res => res.json())//del resultado hace un objeto js
         .then(datos => {
 
-            // Une los tres arrays en uno solo para poder buscar en todos a la vez
+            //esta variable coje todos los datos y los junta
             const todos = datos.playa.concat(datos.montaña, datos.urbano);
 
-            let h = null;
+            let hotel = null;
 
-            // Recorre todos los hoteles hasta encontrar el que coincide con el nombre de la URL
+            //recorre todos los hoteles hasta encontrar el que tenga el mismo nombre
             for (let i = 0; i < todos.length; i++) {
                 if (todos[i].nombre === nombreBuscado) {
-                    h = todos[i];
-                    break; // Para el bucle en cuanto lo encuentra
+                    hotel = todos[i]; //se guarda
+                    break; //para el bucle cuando lo encuentra
                 }
             }
 
-            if (h) {
-                // Rellena los elementos del HTML con los datos del hotel encontrado
-                document.getElementById('nombre_hotel').innerText = h.nombre;
-                document.getElementById('imagen').src = h.foto;
-                document.getElementById('descripcion_hotel').innerText = h.descripcion;
-                document.getElementById('precio_hotel').innerText = h.precio + "€/noche";
+            //si se encuentra el hotel
+            if (hotel) {
+                //rellena los elementos con los datos del hotel
+                document.getElementById('nombre_hotel').innerText = hotel.nombre;
+                document.getElementById('imagen').src = hotel.foto;
+                document.getElementById('descripcion_hotel').innerText = hotel.descripcion;
+                document.getElementById('precio_hotel').innerText = hotel.precio + "€/noche";
 
-                // Asigna la función de favoritos al botón de esta página
+                //aqui tambien se le asigna la función de favoritos al botón de product.html
                 document.getElementById('btnfav').onclick = function(e){
-                    botonFavorito(e, h);
+                    botonFavorito(e, hotel);
                 };
 
-                // Rellena el article de ventajas con los datos del JSON
+                //rellena el article de ventajas con los datos del json
                 const contenedorVentajas = document.getElementById('ventajas');
-                if (contenedorVentajas && h.ventajas) {
-                    // Object.values() convierte el objeto ventajas en un array de sus valores
-                    Object.values(h.ventajas).forEach(ventaja => {
+
+                //si existe el contenedorVentajas
+                if (contenedorVentajas) {
+                    //recorremos las ventajas del json, se crea un parrafo y se le añade el texto
+                    //Object.values() convierte el objeto ventajas en un array de sus valores
+                    Object.values(hotel.ventajas).forEach(ventaja => {
                         const p = document.createElement('p');
-                        p.textContent = ventaja; // Cada valor del objeto se convierte en un <p>
-                        contenedorVentajas.appendChild(p);
+                        p.textContent = ventaja;
+                        contenedorVentajas.appendChild(p);//cada parrafo se añade al contenedor
                     });
                 }
             }
         })
-        .catch(err => console.error("error al cargar el json:", err));
+        .catch(err => console.error("error al cargar el json:", err)); //si hay un error al cargar el json se muestra un mensaje
 }
 
-// ─── FAVORITOS ────────────────────────────────────────────────────────────────
+//favoritos
 
-// Añade o avisa de que ya existe un hotel en favoritos
+//funcion que añade a favoritos el hotel
 function botonFavorito(e, hotel){
-    e.stopPropagation(); // Evita que el clic se propague al article y navegue a product.html
+    e.stopPropagation(); //para la accion del evento para validar
 
-    // Lee el array de favoritos guardado, o crea uno vacío si no existe
+    //recoge los favoritos guardados en localStorage a un array.
+    // Si no hay ninguno, crea un array vacío.
     let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
     let existe = false;
 
-    // Busca si el hotel ya está en favoritos comparando por nombre
+    //bucle que recorre favoritos y busca si el hotel ya esta en favoritos
     for (let i = 0; i < favoritos.length; i++) {
         if (favoritos[i] === hotel.nombre) {
             existe = true;
@@ -240,46 +256,64 @@ function botonFavorito(e, hotel){
         }
     }
 
+    //si no existe
     if (!existe) {
-        favoritos.push(hotel.nombre); // Añade el nombre al array
-        localStorage.setItem('favoritos', JSON.stringify(favoritos)); // Guarda el array actualizado
+        favoritos.push(hotel.nombre); //añade el nombre al array
+        localStorage.setItem('favoritos', JSON.stringify(favoritos)); //guarda el array actualizado en favoritos
         alert(hotel.nombre + " añadido a favoritos");
     } else {
+        //si ya existe muestra una alerta de que ya esta en favoritos
         alert("Este hotel ya está en tus favoritos");
     }
 }
 
-// ─── CARGA DE FAVORITOS EN favoritos.html ────────────────────────────────────
+//cargar favoritos
 
-// Comprueba si existe el contenedor de favoritos (solo existe en favoritos.html)
+//comprueba si existe la seccion de favoritos
 const sectionFav = document.getElementById('sectionfav');
 
+//si existe llama a la fucnion cargar favoritos
 if (sectionFav) {
-    cargarFavoritos(); // Si existe, llama a la función que pinta los favoritos
+    cargarFavoritos();
 }
 
+//esta funcion carga los hoteles que estan en el array de favoritos de localstorage
 function cargarFavoritos() {
-    // Lee el array de favoritos del localStorage
+
+    //lee el array de favoritos del localStorage
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-    // Si no hay ninguno, muestra un mensaje y para
-    if (favoritos.length === 0) {
+    //si no hay ningun hotel en favoritos
+    if (favoritos.length == 0) {
+        //crea un parrafo con la siguiente info:
         sectionFav.innerHTML = '<p>No tienes hoteles favoritos guardados.</p>';
         return;
     }
 
+    //si hay un hotel, carga el json
     fetch('/json/hoteles.json')
-        .then(res => res.json())
+        .then(res => res.json())//recoje el resultado en un objeto js
         .then(datos => {
+
+            //coje todos los hoteles y los junta
             const todos = datos.playa.concat(datos.montaña, datos.urbano);
 
-            // Por cada nombre guardado en favoritos, busca el hotel completo en el JSON
-            favoritos.forEach(nombreFav => {
-                // find() devuelve el primer elemento que cumple la condición, o undefined
-                const hotel = todos.find(h => h.nombre === nombreFav);
-                if (!hotel) return; // Si no lo encuentra (fue borrado del JSON), lo salta
+            //recorre favoritos por cada nombre que tenga
+            favoritos.forEach(nombreHotel => {
+                let hotel = null;
 
-                // Crea y rellena el article de cada hotel favorito
+                //este bucle busca entre todos los hoteles
+                for (let i = 0; i < todos.length; i++) {
+                    //si el nombre del favoritos coincide con el nombre del hotel que buscamos
+                    if (todos[i].nombre == nombreHotel) {
+                        hotel = todos[i]; //le assignamos el hotel
+                        break;
+                    }
+                }
+
+                if (!hotel) return; //si no lo encuentra, es decir que ha sido eliminado el json, lo salta.
+
+                //crea y rellena el article de cada hotel en favoritos
                 const article = document.createElement('article');
                 article.classList.add('articlefav');
 
@@ -290,10 +324,22 @@ function cargarFavoritos() {
                     <button class="btnEliminarFav">Eliminar de favoritos ❌</button>
                 `;
 
-                // Al pulsar eliminar: borra el hotel del localStorage y elimina el article del DOM
+                //al pulsar eliminar borra el hotel del localStorage y elimina el article
                 article.querySelector('.btnEliminarFav').onclick = function () {
+                    //recoje el array de favoritos
                     let favs = JSON.parse(localStorage.getItem('favoritos')) || [];
-                    favs = favs.filter(f => f !== hotel.nombre); // filter() devuelve un nuevo array sin ese hotel
+                    let nuevoFavs = [];
+
+                    //bucle que recorre el array de favoritos
+                    for (let i = 0; i < favs.length; i++) {
+                        //compara los nombres del hotel que se quiere eliminar
+                        if (favs[i] !== hotel.nombre) {
+                            nuevoFavs.push(favs[i]);
+                        }
+                    }
+
+                    favs = nuevoFavs;
+
                     localStorage.setItem('favoritos', JSON.stringify(favs));
                     article.remove(); // Elimina el article visualmente sin recargar la página
                 };
