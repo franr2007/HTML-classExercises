@@ -327,25 +327,25 @@ function cargarFavoritos() {
                 //al pulsar eliminar borra el hotel del localStorage y elimina el article
                 article.querySelector('.btnEliminarFav').onclick = function () {
                     //recoje el array de favoritos
-                    let favs = JSON.parse(localStorage.getItem('favoritos')) || [];
-                    let nuevoFavs = [];
+                    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+                    let nuevoFavoritos = [];
 
                     //bucle que recorre el array de favoritos
-                    for (let i = 0; i < favs.length; i++) {
-                        //compara los nombres del hotel que se quiere eliminar
-                        if (favs[i] !== hotel.nombre) {
-                            nuevoFavs.push(favs[i]);
+                    for (let i = 0; i < favoritos.length; i++) {
+                        //compara los nombres del hotel y añade todos los que no tengan el nombre buscado
+                        if (favoritos[i] !== hotel.nombre) {
+                            nuevoFavoritos.push(favoritos[i]);//añade los demas hoteles no eliminados
                         }
                     }
 
-                    favs = nuevoFavs;
+                    favoritos = nuevoFavoritos; //el favoritos copia el nuevo favoritos
 
-                    localStorage.setItem('favoritos', JSON.stringify(favs));
-                    article.remove(); // Elimina el article visualmente sin recargar la página
+                    localStorage.setItem('favoritos', JSON.stringify(favoritos));//guarda el array favoritos en texto, en favoritos
+                    article.remove(); //elimina el article
                 };
 
-                sectionFav.appendChild(article);
+                sectionFav.appendChild(article);//mete el article en la seccion favoritos
             });
         })
-        .catch(err => console.error("Error cargando favoritos:", err));
+        .catch(err => console.error("Error cargando favoritos:", err)); //muestra un mensaje si hay un error
 }
